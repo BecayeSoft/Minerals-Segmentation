@@ -1,6 +1,11 @@
 # Minerals-Segmentation
 Minerals segmentation with `scikit-image`.
 
+```
+$ git clone https://github.com/BecayeSoft/Minerals-Segmentation/edit/main/README.md
+$ python Segmentation.py
+```
+
 The photos used to perform segmentation are from an optical microscope with an integrated HD camera. More precisely, they represent subparts of a sample (a single image) of rocks crushed into grains. Each grain represents a mineral (a mineral species).
 The sample below has a size of 2.5 cm in diameter (weight of image weight ~2Go):
 
