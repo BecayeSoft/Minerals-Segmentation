@@ -12,3 +12,13 @@ To do this, we will use sub-images of the photo in the previous figure. Each sub
 Here is an example of a sub-image:
 
 ![Sample of mashed rock](https://github.com/BecayeSoft/Minerals-Segmentation/blob/main/images/mashed_rock_Sample.png)
+
+
+## Process
+1. Threshold: A threshold is applied to improve edges detection.
+2. Edge Detection: Sobel algorithm is applied to detect edges.
+3. Markers: Markers are created from the threshold so that we can apply the "Watershed" algorithm.
+4. Watershed: the watershed algorithm is applied to separate each mineral in the image.
+5. Filling the holes: the holes in the segmented image are then filled.
+6. Labeling: Finally, we extract labels from the image. Each label corresponds to a class of mineral.
+7. Coloring the labels: 
