@@ -21,15 +21,15 @@ def show_all(images, title=''):
     plt.title(title)
     plt.show()
 
-# def show_2_images(im1, im2, title1='', title2=''):
-#     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(8, 3))
-#     ax1.imshow(im1, cmap=plt.cm.gray, interpolation='nearest')
-#     ax1.axis('off')
-#     ax1.set_title(title1)
-#     ax2.imshow(im2, cmap=plt.cm.gray, interpolation='nearest')
-#     ax2.set_title(title2)
-#     ax2.axis('off')
-#     plt.show()
+def show_2_images(im1, im2, title1='', title2=''):
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(8, 3))
+    ax1.imshow(im1, cmap=plt.cm.gray, interpolation='nearest')
+    ax1.axis('off')
+    ax1.set_title(title1)
+    ax2.imshow(im2, cmap=plt.cm.gray, interpolation='nearest')
+    ax2.set_title(title2)
+    ax2.axis('off')
+    plt.show()
 
 def show_with_matplotlib(img, title=''):
     """Shows an image using matplotlib capabilities"""

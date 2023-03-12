@@ -41,8 +41,8 @@ for label in np.unique(segments):
     b, g, r = cv.split(extracted_object)
     blue_mean = np.mean(b)
     green_mean = np.mean(g)
-    red_means = np.mean(r)
-    channels_means.append([blue_mean, green_mean, red_means])
+    red_mean = np.mean(r)
+    channels_means.append([blue_mean, green_mean, red_mean])
 
 # Save mean of each channel into a Dataframe
 df_channels = pd.DataFrame(channels_means,
@@ -54,5 +54,4 @@ for i in range(0, 36):
     plt.imshow(minerals[i])
     plt.axis('off')
 
-plt.title('Extracted minerals')
 plt.show()
