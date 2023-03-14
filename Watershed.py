@@ -10,12 +10,13 @@ from skimage.filters import sobel
 
 images = load_images()
 img = images[0]
+img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
 
 # Darken the image
 M = np.ones(img.shape, dtype="uint8") * 30
 img = cv2.subtract(img, M)
 
-show(img, 'Original Image')
+show(cv2.cvtColor(img, cv2.COLOR_BGR2RGB), 'Original Image')
 img_gray = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 
 # --------------------------------------------------------------
@@ -70,7 +71,6 @@ for label in np.unique(labels):
     extracted_object = np.zeros(img.shape, dtype="uint8")
     extracted_object[mask] = img[mask]
 
-    show(extracted_object)
     minerals.append(extracted_object)
 
 
